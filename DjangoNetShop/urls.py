@@ -21,7 +21,10 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('goods.urls'))
+    path('', include('goods.urls')),
+    path('user/', include('userapp.urls')),
+    path('cart/', include('cart.urls')),
+    path('order/', include('order.urls')),
 ]
 
 if DEBUG:
